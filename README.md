@@ -23,17 +23,17 @@
 ```
 
 1. **Fund your wallet** with USDC (on Base)
-2. **OpenClaw uses [ClawRouter](https://github.com/BlockRunAI/ClawRouter)** to access 40+ LLMs
+2. **OpenClaw uses [ClawRouter](https://github.com/BlockRunAI/ClawRouter)** to access 41+ LLMs
 3. **Pay-per-request** via x402 micropayments - no API keys, no subscriptions
 4. **Save up to 92%** on inference costs with smart model routing
 5. **LLM executes tasks** that generate income
 6. **Profit funds more usage** - creating a self-sustaining money loop
 
-**Get started:** [ClawRouter v0.9.19](https://github.com/BlockRunAI/ClawRouter) ⭐ 2.7k | [BlockRun.ai](https://blockrun.ai)
+**Get started:** [ClawRouter v0.10.5](https://github.com/BlockRunAI/ClawRouter) ⭐ 2.7k | [BlockRun.ai](https://blockrun.ai)
 
-### 🆕 ClawRouter v0.9.19 - Production Ready (Feb 2026)
+### 🆕 ClawRouter v0.10.5 - OpenClaw 2026.2.22 Aligned (Feb 2026)
 
-Latest version with 40+ models, response caching, and battle-tested features:
+Latest version with 41 models, Claude 4.6, Gemini 3.1, `blockrun doctor`, and multilingual support:
 
 | Feature | Description |
 |---------|-------------|
@@ -48,13 +48,15 @@ Latest version with 40+ models, response caching, and battle-tested features:
 | **Model Aliases** | `/model codex`, `/model opus`, `/model sonnet`, `/model kimi`, `/model free` |
 | **Reasoning Model Support** | Handles `reasoning_content` for O3/O4/DeepSeek-R1/Grok-reasoning |
 | **Free Tier Fallback** | Falls back to nvidia/gpt-oss-120b when wallet is empty |
+| **`blockrun doctor`** | AI-powered diagnostics when things go wrong (Sonnet default, Opus for deep analysis) |
+| **Multilingual Keywords** | ES/PT/KO/AR language support for global users |
 
 ```bash
 # Install via OpenClaw
 openclaw plugins install @blockrun/clawrouter
 
 # Or via npm
-npm install @blockrun/clawrouter@0.9.19
+npm install @blockrun/clawrouter@0.10.5
 
 # Or standalone
 curl -fsSL https://blockrun.ai/ClawRouter-update | bash
@@ -107,6 +109,12 @@ curl -fsSL https://blockrun.ai/ClawRouter-update | bash
 - [**OpenTrader**](https://github.com/Open-Trader/opentrader) ⭐ 2.2k - Open-source DCA & Grid trading bot with UI. Self-hosted, pro features unlocked.
   - 💰 **Monetize:** Managed service, custom strategy development, enterprise deployments
 
+- [**Krypto-trading-bot**](https://github.com/ctubio/Krypto-trading-bot) ⭐ 3.7k - Self-hosted high-frequency market making bot in C++. Low-latency automated trading.
+  - 💰 **Monetize:** HFT market making profits, strategy licensing, managed bot hosting
+
+- [**crypto-trading-bot**](https://github.com/Haehnchen/crypto-trading-bot) ⭐ 3.4k - Multi-exchange crypto trading bot in JavaScript. Supports Bitfinex, Bitmex, Binance, Bybit.
+  - 💰 **Monetize:** Multi-exchange arbitrage, strategy development, managed bot service
+
 - [**Sibyl**](https://github.com/nMaroulis/sibyl) - AI-powered crypto trading dashboard. Oracle (LLM agent layer) + Chronos (LSTM/GTU price forecasting).
   - 💰 **Monetize:** Premium analysis tool, API access to signals, white-label for exchanges
 
@@ -127,6 +135,12 @@ curl -fsSL https://blockrun.ai/ClawRouter-update | bash
 - [**AgentTrade**](https://github.com/luffycodes/AgentTrade) - LLM-based trading system using technical analysis, news, and sentiment with reasoning.
   - 💰 **Monetize:** Signal service, managed accounts, SaaS platform
 
+- [**OpenAlice**](https://github.com/TraderAlice/OpenAlice) ⭐ 571 - File-driven AI trading agent engine for crypto and securities markets. Autonomous 24/7 operation.
+  - 💰 **Monetize:** Managed trading service, agent customization, strategy licensing
+
+- [**Dexter**](https://github.com/virattt/dexter) ⭐ 16.1k - Autonomous agent for deep financial research. AI-powered analysis and investment insights.
+  - 💰 **Monetize:** Research-as-a-service, premium analysis reports, enterprise financial intelligence
+
 - [**TradingAgents**](https://github.com/TradingAgents-AI/TradingAgents) - Multi-agent trading framework with specialized analyst, researcher, and trader agents.
   - 💰 **Monetize:** Enterprise trading solutions, custom agent development
 
@@ -140,6 +154,9 @@ curl -fsSL https://blockrun.ai/ClawRouter-update | bash
 
 - [**Solana Trading Bot (Raydium/Pump.fun)**](https://github.com/henrytirla/Solana-Trading-Bot) ⭐ 289 - Buy/sell SPL tokens on Raydium DEX and Pump.fun using Jito SDK.
   - 💰 **Monetize:** Token trading profits, sniping service, strategy consulting
+
+- [**Auto-solana-trading-bot**](https://github.com/radioman/Auto-solana-trading-bot) ⭐ 1k - Auto Solana trading bot on Pumpfun, Pumpswap, Raydium Launchpad using gRPC or Shredstream.
+  - 💰 **Monetize:** Automated launch trading, managed bot service, early-access sniping
 
 - [**solana-grpc-sniper-bot**](https://github.com/0xRustPro/solana-grpc-sniper-bundler-bot) ⭐ 126 - High-speed Solana sniper using gRPC for real-time transaction streaming.
   - 💰 **Monetize:** New token sniping, managed sniper service, speed advantage
@@ -166,8 +183,17 @@ curl -fsSL https://blockrun.ai/ClawRouter-update | bash
 - [**Rust Solana MEV Bot**](https://github.com/SaoXuan/rust-mev-bot-shared) ⭐ 443 - Rust Solana MEV 套利机器人. High-performance arbitrage bot for Solana.
   - 💰 **Monetize:** Solana arbitrage, MEV extraction, bot licensing
 
+- [**q-evm**](https://github.com/sambacha/q-evm) ⭐ 421 - MEV Bot and Flashbots Bundler written in q using kdb+. High-performance quantitative approach.
+  - 💰 **Monetize:** Quantitative MEV extraction, flashbot bundling, strategy licensing
+
+- [**Ethereum-BNB MEV Bot**](https://github.com/sorasuzukidev/ethereum-bnb-mev-bot) ⭐ 357 - Ethereum and BNB (BSC) MEV bot for arbitrage across both chains.
+  - 💰 **Monetize:** Cross-chain MEV extraction, multi-chain arbitrage profits
+
 - [**Loom**](https://github.com/dexloom/loom) ⭐ 331 - MEV Bot based on Alloy. Modern EVM MEV extraction.
   - 💰 **Monetize:** EVM MEV extraction, liquidations, arbitrage strategies
+
+- [**DeFi-bot**](https://github.com/ExtropyIO/defi-bot) ⭐ 1.2k - Tutorial for building DeFi arbitrage bots. Educational foundation for MEV strategies.
+  - 💰 **Monetize:** DeFi arbitrage profits, educational courses, consulting
 
 ---
 
@@ -204,6 +230,21 @@ curl -fsSL https://blockrun.ai/ClawRouter-update | bash
 
 - [**Cross-Market State Fusion**](https://github.com/humanplane/cross-market-state-fusion) ⭐ 343 - RL agent fusing real-time Binance futures data into Polymarket prediction markets. On-device training with MLX on Apple Silicon.
   - 💰 **Monetize:** Cross-market signals, AI model licensing, trading service
+
+- [**Polymarket Copy Bot (TS)**](https://github.com/JerriyaAnderson/polymarket-copy-bot-ts) ⭐ 819 - Polymarket copy trading bot in TypeScript. Follow top traders automatically.
+  - 💰 **Monetize:** Copy trading service, signal selling, SaaS platform
+
+- [**Kalshi-Polymarket AI Bot**](https://github.com/CraftyGeezer/Kalshi-Polymarket-Ai-bot) ⭐ 689 - AI-powered bot for trading on both Kalshi and Polymarket prediction markets.
+  - 💰 **Monetize:** Cross-platform trading, AI signal service, managed accounts
+
+- [**rs-clob-client**](https://github.com/Polymarket/rs-clob-client) ⭐ 520 - Official Polymarket Rust CLOB client. High-performance order book access.
+  - 💰 **Monetize:** Build ultra-fast trading bots, HFT strategies, API services
+
+- [**Polymarket RSI/MACD Bot**](https://github.com/Daniel-Dias001/Polymarket-rsi-macd-index-trading-bot) ⭐ 484 - Polymarket trading bot combining RSI/MACD strategy logic for 15-minute prediction markets.
+  - 💰 **Monetize:** Technical analysis trading, signal service, bot licensing
+
+- [**clob-client (TS)**](https://github.com/Polymarket/clob-client) ⭐ 441 - Official TypeScript client for the Polymarket CLOB.
+  - 💰 **Monetize:** Build custom bots, trading dashboards, API integrations
 
 - [**Polymarket Spike Bot**](https://github.com/Trust412/Polymarket-spike-bot-v1) ⭐ 310 - High-frequency Polymarket trading bot with real-time price monitoring, automated spike detection, and smart order execution.
   - 💰 **Monetize:** HFT profits, bot licensing, managed trading
@@ -304,6 +345,9 @@ curl -fsSL https://blockrun.ai/ClawRouter-update | bash
 
 - [**SoraFM**](https://github.com/all-in-aigc/sorafm) ⭐ 1.1k - Sora AI Video Generator web interface. Generate videos with OpenAI Sora API.
   - 💰 **Monetize:** Video generation service, SaaS platform, API reselling
+
+- [**YumCut**](https://github.com/IgorShadurin/app.yumcut.com) ⭐ 772 - Free AI video generator for TikTok, Reels, YouTube Shorts. Auto script, scenes, voiceover, subtitles. Multi-language.
+  - 💰 **Monetize:** Short-form content agency, faceless channel automation, white-label platform
 
 - [**AI Video Generator Agent**](https://github.com/davide97l/ai-video-generator) ⭐ 126 - AI agent that automatically generates and posts short videos. Full automation pipeline.
   - 💰 **Monetize:** Faceless channel automation, content agency, video-as-a-service
@@ -437,11 +481,29 @@ Build monetizable AI agents with these frameworks:
 - [**AgentOps**](https://github.com/AgentOps-AI/agentops) ⭐ 5.3k - Python SDK for AI agent monitoring, LLM cost tracking, benchmarking. Integrates with CrewAI, Langchain, Autogen.
   - 💰 **Monetize:** Agent observability platform, enterprise monitoring, cost optimization consulting
 
-- [**CrewAI**](https://github.com/crewAIInc/crewAI) - Lean, fast Python framework for orchestrating role-playing AI agents with collaborative intelligence.
-  - 💰 **Monetize:** Niche agents, consulting, pre-built templates, managed hosting
-
 - [**Pydantic-AI**](https://github.com/pydantic/pydantic-ai) - GenAI Agent Framework with validation layer for OpenAI, Anthropic, Google SDKs.
   - 💰 **Monetize:** Validated agent applications, development services
+
+- [**Cherry Studio**](https://github.com/CherryHQ/cherry-studio) ⭐ 40k - AI productivity studio with smart chat, autonomous agents, and 300+ assistants. Unified access to frontier LLMs.
+  - 💰 **Monetize:** White-label AI productivity platform, enterprise deployments, custom assistant development
+
+- [**AgenticSeek**](https://github.com/Fosowl/agenticSeek) ⭐ 25.1k - Fully local autonomous agent. No APIs, no subscriptions. Thinks, browses the web, and codes locally.
+  - 💰 **Monetize:** Privacy-first AI consulting, on-prem enterprise deployments, local agent solutions
+
+- [**OpenAI Agents Python**](https://github.com/openai/openai-agents-python) ⭐ 19.1k - OpenAI's lightweight, powerful framework for multi-agent workflows.
+  - 💰 **Monetize:** Multi-agent SaaS products, enterprise agent orchestration, consulting
+
+- [**DB-GPT**](https://github.com/eosphoros-ai/DB-GPT) ⭐ 18.1k - AI Native Data App Development framework with Agentic Workflow Expression Language (AWEL) and Agents.
+  - 💰 **Monetize:** Data-powered AI apps, enterprise data agents, analytics automation
+
+- [**Plandex**](https://github.com/plandex-ai/plandex) ⭐ 15k - Open source AI coding agent designed for large projects and real world tasks.
+  - 💰 **Monetize:** Enterprise coding automation, development agency, managed coding agents
+
+- [**OpenCode**](https://github.com/opencode-ai/opencode) ⭐ 11.1k - Powerful AI coding agent built for the terminal. Open-source alternative to proprietary coding agents.
+  - 💰 **Monetize:** Developer automation, custom extensions, enterprise licensing
+
+- [**Microsoft Agent Framework**](https://github.com/microsoft/agent-framework) ⭐ 7.4k - Framework for building, orchestrating and deploying AI agents and multi-agent workflows (Python and .NET).
+  - 💰 **Monetize:** Enterprise agent solutions, .NET/Python agent development, consulting
 
 ### Browser Automation Agents
 
@@ -572,21 +634,25 @@ Model Context Protocol (MCP) enables AI agents to connect to external tools and 
 
 ### Infrastructure
 
-- [**ClawRouter v0.9.19**](https://github.com/BlockRunAI/ClawRouter) ⭐ 2.7k - Smart LLM router, save up to 92% on inference. 40+ models, one USDC wallet. **Features:** Response caching, 4 routing profiles, context-length routing, agentic auto-detect, tool detection, session persistence.
+- [**ClawRouter v0.10.5**](https://github.com/BlockRunAI/ClawRouter) ⭐ 2.7k - Smart LLM router, save up to 92% on inference. 41 models, one USDC wallet. **Features:** Response caching, 4 routing profiles, context-length routing, agentic auto-detect, tool detection, session persistence, `blockrun doctor`, multilingual support.
 - [**BlockRun.ai**](https://blockrun.ai) - Pay-per-request AI via x402 micropayments.
 
 #### Popular Models on BlockRun (Feb 2026)
 
 | Model | Pricing | Best For |
 |-------|---------|----------|
+| Gemini 2.5 Flash Lite | $0.10/$0.40 | Ultra-cheap, #2 on OpenRouter (16.8% traffic) |
 | Grok Code Fast | $0.20/$1.50 | Fast coding, agentic tasks |
-| GPT-5.2-Codex | $2.50/$12.00 | Agentic coding (NEW) |
-| Claude Opus 4.6 | $5.00/$25.00 | Premium quality, reasoning (NEW) |
-| Kimi K2.5 | $0.50/$2.40 | 262K context, 200+ tool chains (NEW) |
-| Gemini 3 Pro | $2.00/$12.00 | Multimodal, reasoning (NEW) |
-| Claude Sonnet 4 | $3.00/$15.00 | Coding, agentic workflows |
+| GPT-5.2-Codex | $2.50/$12.00 | Agentic coding |
+| Claude Opus 4.6 | $5.00/$25.00 | Premium quality, reasoning |
+| Claude Sonnet 4.6 | $3.00/$15.00 | Coding, agentic workflows |
+| Kimi K2.5 | $0.60/$3.00 | 262K context, 200+ tool chains |
+| Gemini 3.1 Pro Preview | $2.00/$12.00 | Newest Gemini, advanced reasoning |
+| Gemini 3 Flash Preview | $0.50/$3.00 | #5 on OpenRouter (6.2% traffic) |
 | DeepSeek V3.2 | $0.14/$0.28 | Budget-friendly, general |
-| OpenAI O4-mini | NEW | Fast reasoning (NEW) |
+| OpenAI O4-mini | NEW | Fast reasoning |
+| GPT-4.1-nano | $0.10/$0.40 | Ultra-cheap GPT-4 class |
+| Grok 2 Vision | $2.00/$10.00 | Vision-capable Grok |
 | NVIDIA GPT-OSS-120B | $0/$0 | Free tier fallback |
 
 ### Data & Trading
@@ -599,7 +665,7 @@ Model Context Protocol (MCP) enables AI agents to connect to external tools and 
 
 ## Cost Considerations
 
-| Cost | Traditional | With ClawRouter v0.9.19 |
+| Cost | Traditional | With ClawRouter v0.10.5 |
 |------|-------------|----------------------|
 | LLM API tokens | $50 - $500+/mo | $4 - $40+/mo |
 | Hosting | $5 - $50/mo | $5 - $50/mo |
@@ -608,7 +674,7 @@ Model Context Protocol (MCP) enables AI agents to connect to external tools and 
 
 **Blended cost:** $2.05/M tokens vs $25/M (Opus) = **92% savings**
 
-**Pro tip:** Use `/model eco` profile for maximum savings. Kimi K2.5 offers 262K context at $0.50/$2.40 - great for long documents.
+**Pro tip:** Use `/model eco` profile for maximum savings. Gemini 2.5 Flash Lite at $0.10/$0.40 is now the cheapest option. Kimi K2.5 offers 262K context at $0.60/$3.00 for long documents.
 
 ---
 
