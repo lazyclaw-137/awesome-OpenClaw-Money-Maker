@@ -29,7 +29,7 @@
 5. **LLM executes tasks** that generate income
 6. **Profit funds more usage** - creating a self-sustaining money loop
 
-**Get started:** [ClawRouter v0.11.12](https://github.com/BlockRunAI/ClawRouter) ⭐ 2.7k | [BlockRun.ai](https://blockrun.ai)
+**Get started:** [ClawRouter v0.11.12](https://github.com/BlockRunAI/ClawRouter) ⭐ 3.8k | [BlockRun.ai](https://blockrun.ai)
 
 ### 🆕 ClawRouter v0.11.12 - Mar 2026
 
@@ -338,7 +338,7 @@ curl -fsSL https://blockrun.ai/ClawRouter-update | bash
 - [**Google-Maps-Scraper**](https://github.com/omkarcloud/google-maps-scraper) ⭐ 1.4k - Bulk scrape Google Maps (names, addresses, phones, emails, ratings).
   - 💰 **Monetize:** Sell local business leads, B2B contact databases
 
-- [**ChatGPT Scraper**](https://github.com/oxylabs/chatgpt-scraper) ⭐ 2.7k - Collect ChatGPT responses via Web Scraper API. Automated prompt responses.
+- [**ChatGPT Scraper**](https://github.com/oxylabs/chatgpt-scraper) ⭐ 3.8k - Collect ChatGPT responses via Web Scraper API. Automated prompt responses.
   - 💰 **Monetize:** AI response aggregation, research automation, data collection service
 
 ---
@@ -678,7 +678,7 @@ Model Context Protocol (MCP) enables AI agents to connect to external tools and 
 
 ### Infrastructure
 
-- [**ClawRouter v0.11.12**](https://github.com/BlockRunAI/ClawRouter) ⭐ 2.7k - Smart LLM router, save up to 92% on inference. 16-model curated allowlist, one USDC wallet. **Features:** Response caching, 4 routing profiles, `/imagegen`, `clawrouter report`, three-strike escalation, `/debug`, tool-calling filter, session persistence, `clawrouter doctor`, multilingual support.
+- [**ClawRouter v0.11.12**](https://github.com/BlockRunAI/ClawRouter) ⭐ 3.8k - Smart LLM router, save up to 92% on inference. 16-model curated allowlist, one USDC wallet. **Features:** Response caching, 4 routing profiles, `/imagegen`, `clawrouter report`, three-strike escalation, `/debug`, tool-calling filter, session persistence, `clawrouter doctor`, multilingual support.
 - [**BlockRun.ai**](https://blockrun.ai) - Pay-per-request AI via x402 micropayments.
 
 #### Popular Models on BlockRun (Mar 2026)
