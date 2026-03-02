@@ -29,11 +29,11 @@
 5. **LLM executes tasks** that generate income
 6. **Profit funds more usage** - creating a self-sustaining money loop
 
-**Get started:** [ClawRouter v0.10.5](https://github.com/BlockRunAI/ClawRouter) ⭐ 2.7k | [BlockRun.ai](https://blockrun.ai)
+**Get started:** [ClawRouter v0.11.12](https://github.com/BlockRunAI/ClawRouter) ⭐ 2.7k | [BlockRun.ai](https://blockrun.ai)
 
-### 🆕 ClawRouter v0.10.5 - OpenClaw 2026.2.22 Aligned (Feb 2026)
+### 🆕 ClawRouter v0.11.12 - Mar 2026
 
-Latest version with 41 models, Claude 4.6, Gemini 3.1, `blockrun doctor`, and multilingual support:
+Latest version with 16-model curated allowlist, image generation, usage reports, and three-strike escalation:
 
 | Feature | Description |
 |---------|-------------|
@@ -48,15 +48,20 @@ Latest version with 41 models, Claude 4.6, Gemini 3.1, `blockrun doctor`, and mu
 | **Model Aliases** | `/model codex`, `/model opus`, `/model sonnet`, `/model kimi`, `/model free` |
 | **Reasoning Model Support** | Handles `reasoning_content` for O3/O4/DeepSeek-R1/Grok-reasoning |
 | **Free Tier Fallback** | Falls back to nvidia/gpt-oss-120b when wallet is empty |
-| **`blockrun doctor`** | AI-powered diagnostics when things go wrong (Sonnet default, Opus for deep analysis) |
+| **`clawrouter doctor`** | AI-powered diagnostics when things go wrong (Sonnet default, Opus for deep analysis) |
+| **`clawrouter report`** | Daily/weekly/monthly usage reports via `npx @blockrun/clawrouter report` |
+| **`/imagegen` command** | Generate images from chat (DALL-E 3, Flux, Google Nano Banana) with x402 micropayments |
+| **`/debug` command** | Routing diagnostics (tier, model, scores, session state) with zero API cost |
+| **Three-Strike Escalation** | Auto-escalates SIMPLE→MEDIUM→COMPLEX→REASONING on 3 identical hashes — fixes agentic loops |
 | **Multilingual Keywords** | ES/PT/KO/AR language support for global users |
+| **16-Model Curated Allowlist** | Trimmed to top 16 models across 4 routing profiles + popular picks |
 
 ```bash
 # Install via OpenClaw
 openclaw plugins install @blockrun/clawrouter
 
 # Or via npm
-npm install @blockrun/clawrouter@0.10.5
+npm install @blockrun/clawrouter@0.11.12
 
 # Or standalone
 curl -fsSL https://blockrun.ai/ClawRouter-update | bash
@@ -125,6 +130,12 @@ curl -fsSL https://blockrun.ai/ClawRouter-update | bash
 
 - [**GOAT SDK**](https://github.com/goat-sdk/goat) ⭐ 951 - The leading agentic finance toolkit for AI agents. Connect agents to DeFi protocols, wallets, and on-chain actions.
   - 💰 **Monetize:** Agent-powered trading bots, DeFi automation, on-chain agent services
+
+- [**OpenNof1**](https://github.com/wfnuser/OpenNof1) ⭐ 207 - Your custom 24/7 AI trading agent. Inspired by nof1.ai. Open source and self-hostable.
+  - 💰 **Monetize:** Managed trading service, strategy licensing, white-label solutions
+
+- [**EVClaw**](https://github.com/Degenapetrader/EVClaw) ⭐ 29 - OpenClaw AI Trading Agent based on EVPlus.AI market data.
+  - 💰 **Monetize:** EV-driven trading signals, managed accounts, strategy licensing
 
 - [**nof1.ai**](https://github.com/195440/nof1.ai) ⭐ 551 - Autonomous AI trading agent. Web-based interface with real-time market monitoring and AI-powered decision making.
   - 💰 **Monetize:** Managed trading service, strategy licensing, white-label solutions
@@ -478,6 +489,21 @@ Build monetizable AI agents with these frameworks:
 - [**PraisonAI**](https://github.com/MervinPraison/PraisonAI) ⭐ 5.6k - Production-ready Multi AI Agents framework. Low-code solution for building and managing multi-agent LLM systems.
   - 💰 **Monetize:** Pre-built agent teams, custom workflows, managed deployments
 
+- [**HKUDS/ClawWork**](https://github.com/HKUDS/ClawWork) ⭐ 6k - OpenClaw as Your AI Coworker. Autonomous 24/7 task execution — $10K earned in 7 hours (case study).
+  - 💰 **Monetize:** Freelancing automation, agentic task marketplace, enterprise coworker licensing
+
+- [**HKUDS/nanobot**](https://github.com/HKUDS/nanobot) ⭐ 27.4k - Ultra-Lightweight OpenClaw. Minimal footprint, full capability — ideal for edge deployments.
+  - 💰 **Monetize:** Embedded agent services, IoT automation, lightweight enterprise deployments
+
+- [**qwibitai/nanoclaw**](https://github.com/qwibitai/nanoclaw) ⭐ 17.2k - Lightweight alternative to OpenClaw that runs in containers for security and scalability.
+  - 💰 **Monetize:** Container-native agent services, multi-tenant deployments, self-hosted SaaS
+
+- [**NevaMind-AI/memU**](https://github.com/NevaMind-AI/memU) ⭐ 12.2k - Memory layer for 24/7 proactive agents (OpenClaw, Moltbot, Clawdbot). Long-term context across sessions.
+  - 💰 **Monetize:** Memory-as-a-service for agents, personalized AI assistant products
+
+- [**iOfficeAI/AionUi**](https://github.com/iOfficeAI/AionUi) ⭐ 17.6k - Free, local, open-source 24/7 cowork app and OpenClaw for Gemini CLI, Claude Code.
+  - 💰 **Monetize:** Desktop agent licensing, enterprise 24/7 workflow automation
+
 - [**AgentOps**](https://github.com/AgentOps-AI/agentops) ⭐ 5.3k - Python SDK for AI agent monitoring, LLM cost tracking, benchmarking. Integrates with CrewAI, Langchain, Autogen.
   - 💰 **Monetize:** Agent observability platform, enterprise monitoring, cost optimization consulting
 
@@ -528,11 +554,25 @@ Build monetizable AI agents with these frameworks:
 
 - [**BankrBot/openclaw-skills**](https://github.com/BankrBot/openclaw-skills) - Polymarket, crypto trading, DeFi, leverage, portfolio management, NFTs. Multi-chain support.
 
-- [**VoltAgent/awesome-openclaw-skills**](https://github.com/VoltAgent/awesome-openclaw-skills) ⭐ 4.5k - Curated collection of OpenClaw skills and integrations.
+- [**VoltAgent/awesome-openclaw-skills**](https://github.com/VoltAgent/awesome-openclaw-skills) ⭐ 24.5k - Curated collection of OpenClaw skills. 5,400+ skills filtered and categorized.
 
 - [**openclaw/clawhub**](https://github.com/openclaw/clawhub) ⭐ 1.4k - Official skill directory and marketplace.
 
-- [**ClawdTalk**](https://github.com/team-telnyx/clawdtalk-client) ⭐ - Phone calling and SMS for OpenClaw via Telnyx. AI agents can make/receive calls and SMS with calendar, Jira, and web search integration.
+- [**clawdbot-ai/awesome-openclaw-skills-zh**](https://github.com/clawdbot-ai/awesome-openclaw-skills-zh) ⭐ 1.5k - OpenClaw 中文官方技能库. Translated from Clawdbot official skills, organized by scenario.
+  - 💰 **Monetize:** Chinese-language skill marketplace, localized agent services
+
+- [**sundial-org/awesome-openclaw-skills**](https://github.com/sundial-org/awesome-openclaw-skills) ⭐ 341 - Top OpenClaw skills, curated for popularity and usefulness.
+
+- [**zscole/model-hierarchy-skill**](https://github.com/zscole/model-hierarchy-skill) ⭐ 322 - OpenClaw skill for cost-optimized model routing based on task complexity. ClawRouter-compatible.
+  - 💰 **Monetize:** Save on LLM costs for high-volume workflows, sell as premium skill
+
+- [**ythx-101/x-tweet-fetcher**](https://github.com/ythx-101/x-tweet-fetcher) ⭐ 302 - Fetch tweets and replies from X/Twitter without login or API keys. OpenClaw skill.
+  - 💰 **Monetize:** Social media monitoring service, sentiment analysis, lead gen
+
+- [**sharbelxyz/x-bookmarks**](https://github.com/sharbelxyz/x-bookmarks) ⭐ 226 - OpenClaw skill: turn your X bookmarks into agent actions.
+  - 💰 **Monetize:** Research automation, content curation service
+
+- [**ClawdTalk**](https://github.com/team-telnyx/clawdtalk-client) - Phone calling and SMS for OpenClaw via Telnyx. AI agents can make/receive calls and SMS with calendar, Jira, and web search integration.
   - 💰 **Monetize:** AI voice agent service, automated customer support lines, appointment reminder callbacks
 
 ---
@@ -632,23 +672,27 @@ Model Context Protocol (MCP) enables AI agents to connect to external tools and 
 
 - [**AI-Agent-Platforms-Automation-Tools**](https://github.com/rembertdesigns/AI-Agent-Platforms-Automation-Tools) - Directory of autonomous AI agents, frameworks, platforms.
 
+- [**hesamsheikh/awesome-openclaw-usecases**](https://github.com/hesamsheikh/awesome-openclaw-usecases) ⭐ 15k - Community collection of OpenClaw use cases for making life (and money) easier.
+
+- [**HKUDS/ClawWork**](https://github.com/HKUDS/ClawWork) ⭐ 6k - Case study: OpenClaw as autonomous AI coworker earning $10K in 7 hours.
+
 ### Infrastructure
 
-- [**ClawRouter v0.10.5**](https://github.com/BlockRunAI/ClawRouter) ⭐ 2.7k - Smart LLM router, save up to 92% on inference. 41 models, one USDC wallet. **Features:** Response caching, 4 routing profiles, context-length routing, agentic auto-detect, tool detection, session persistence, `blockrun doctor`, multilingual support.
+- [**ClawRouter v0.11.12**](https://github.com/BlockRunAI/ClawRouter) ⭐ 2.7k - Smart LLM router, save up to 92% on inference. 16-model curated allowlist, one USDC wallet. **Features:** Response caching, 4 routing profiles, `/imagegen`, `clawrouter report`, three-strike escalation, `/debug`, tool-calling filter, session persistence, `clawrouter doctor`, multilingual support.
 - [**BlockRun.ai**](https://blockrun.ai) - Pay-per-request AI via x402 micropayments.
 
-#### Popular Models on BlockRun (Feb 2026)
+#### Popular Models on BlockRun (Mar 2026)
 
 | Model | Pricing | Best For |
 |-------|---------|----------|
-| Gemini 2.5 Flash Lite | $0.10/$0.40 | Ultra-cheap, #2 on OpenRouter (16.8% traffic) |
+| Gemini 3.1 Pro Preview | $2.00/$12.00 | Advanced reasoning, newest Gemini |
+| Gemini 3 Flash Preview | $0.50/$3.00 | Fast, cheap multimodal |
+| Gemini 2.5 Flash Lite | $0.10/$0.40 | Ultra-cheap ECO tier default |
 | Grok Code Fast | $0.20/$1.50 | Fast coding, agentic tasks |
 | GPT-5.2-Codex | $2.50/$12.00 | Agentic coding |
 | Claude Opus 4.6 | $5.00/$25.00 | Premium quality, reasoning |
 | Claude Sonnet 4.6 | $3.00/$15.00 | Coding, agentic workflows |
 | Kimi K2.5 | $0.60/$3.00 | 262K context, 200+ tool chains |
-| Gemini 3.1 Pro Preview | $2.00/$12.00 | Newest Gemini, advanced reasoning |
-| Gemini 3 Flash Preview | $0.50/$3.00 | #5 on OpenRouter (6.2% traffic) |
 | DeepSeek V3.2 | $0.14/$0.28 | Budget-friendly, general |
 | OpenAI O4-mini | NEW | Fast reasoning |
 | GPT-4.1-nano | $0.10/$0.40 | Ultra-cheap GPT-4 class |
@@ -674,7 +718,7 @@ Model Context Protocol (MCP) enables AI agents to connect to external tools and 
 
 **Blended cost:** $2.05/M tokens vs $25/M (Opus) = **92% savings**
 
-**Pro tip:** Use `/model eco` profile for maximum savings. Gemini 2.5 Flash Lite at $0.10/$0.40 is now the cheapest option. Kimi K2.5 offers 262K context at $0.60/$3.00 for long documents.
+**Pro tip:** Use `/model eco` profile for maximum savings. Gemini 2.5 Flash Lite at $0.10/$0.40 is the cheapest option (ECO tier default). Kimi K2.5 offers 262K context at $0.60/$3.00 for long documents. Use `/imagegen` for on-demand image generation via x402 micropayments.
 
 ---
 
